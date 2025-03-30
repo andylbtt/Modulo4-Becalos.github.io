@@ -6,7 +6,7 @@ Cada semana tiene su propia carpeta, en donde se encuentra el código correspond
 
 ## 🗂 Estructura del repositorio
 
-- `/Semana1` → Proyecto: **Planificador de Viajes** 🧳
+- `/Clase1` → Proyecto: **Planificador de Viajes** 🧳
 - `/Semana2` → *(Próximamente)*
 - `/Semana3` → *(Próximamente)*
 
