@@ -1,6 +1,6 @@
-# 🧳 Planificador de Viajes – Semana 1
+# 🧳 Planificador de Viajes – Clase 1
 
-Este proyecto forma parte del Módulo 4 del curso de Frontend del programa **Bécalos**. Durante la **Semana 1**, se desarrolló una aplicación web interactiva que permite a los usuarios registrar destinos, elegir fecha y transporte, y visualizar un itinerario con costos estimados.
+Este proyecto forma parte del Módulo 4 del curso de Frontend del programa **Bécalos**. Durante la **Clase 1**, se desarrolló una aplicación web interactiva que permite a los usuarios registrar destinos, elegir fecha y transporte, y visualizar un itinerario con costos estimados.
 
 ## 🚀 Funcionalidades
 
@@ -26,5 +26,5 @@ Este proyecto forma parte del Módulo 4 del curso de Frontend del programa **Bé
 
 Accede al proyecto funcionando en GitHub Pages:
 
-👉 [https://andylbtt.github.io/Modulo4-Becalos.github.io/Semana1/](https://andylbtt.github.io/Modulo4-Becalos.github.io/Semana1/)
+👉 [https://andylbtt.github.io/Modulo4-Becalos.github.io/Clase1/](https://andylbtt.github.io/Modulo4-Becalos.github.io/Clase1/)
 ---

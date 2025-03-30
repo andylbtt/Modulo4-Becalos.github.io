@@ -14,10 +14,6 @@ Cada semana tiene su propia carpeta, en donde se encuentra el código correspond
 
 Una aplicación web que permite registrar destinos de viaje, seleccionar fecha y transporte, y visualizar un itinerario con costos estimados. Usa HTML, CSS y JavaScript.
 
-### Captura de pantalla
-
-![Vista previa](https://images.unsplash.com/photo-1507525428034-b723cf961d3e)
-
 > 📁 Archivos ubicados en `/Semana1`
 
 - `index.html`
