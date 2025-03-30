@@ -2,27 +2,31 @@
 
 Este repositorio contiene las actividades y proyectos desarrollados durante el **Módulo 4** del curso de desarrollo Frontend del programa Bécalos.
 
-Cada semana tiene su propia carpeta, en donde se encuentra el código correspondiente a la actividad de esa semana.
+Cada clase tiene su propia carpeta, en donde se encuentra el código correspondiente a la actividad o proyecto realizado.
 
 ## 🗂 Estructura del repositorio
 
 - `/Clase1` → Proyecto: **Planificador de Viajes** 🧳
-- `/Semana2` → *(Próximamente)*
-- `/Semana3` → *(Próximamente)*
+- `/Clase2` → *(Próximamente)*
+- `/Clase3` → *(Próximamente)*
 
-## 📌 Semana 1 - Planificador de Viajes
+## 📌 Clase 1 - Planificador de Viajes
 
-Una aplicación web que permite registrar destinos de viaje, seleccionar fecha y transporte, y visualizar un itinerario con costos estimados. Usa HTML, CSS y JavaScript.
+Una aplicación web que permite registrar destinos de viaje, seleccionar fecha, hora y transporte, y visualizar un itinerario con costos estimados. Usa HTML, CSS y JavaScript (DOM).
 
-> 📁 Archivos ubicados en `/Semana1`
-
+📁 Archivos ubicados en `/Clase1`:
 - `index.html`
 - `styles.css`
-- `app.js` *(si aplica)*
+- `app.js`
+- `README.md`
+
+## 🌐 Proyecto en línea
+
+👉 [https://andylbtt.github.io/Modulo4-Becalos.github.io/Clase1/](https://andylbtt.github.io/Modulo4-Becalos.github.io/Clase1/)
 
 ---
 
 Este repositorio sirve como evidencia del aprendizaje y desarrollo de habilidades a lo largo del módulo.
 
-👨‍💻 Autor: [Tu Nombre o Usuario GitHub]  
+👨‍💻 Autor: [andylbtt]  
 📅 Fecha de inicio: Marzo 2025
