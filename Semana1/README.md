@@ -9,7 +9,6 @@ Este proyecto forma parte del Módulo 4 del curso de Frontend del programa **Bé
 - Cálculo automático del costo del viaje.
 - Visualización dinámica del itinerario registrado.
 - Eliminación de destinos registrados.
-- Diseño amigable y pastel con imagen de portada.
 
 ## 🧠 Tecnologías utilizadas
 
@@ -19,16 +18,13 @@ Este proyecto forma parte del Módulo 4 del curso de Frontend del programa **Bé
 
 ## 🗂 Archivos incluidos
 
-- `index.html`: Contiene toda la estructura y lógica del sitio.
-- `styles.css`: Estilos personalizados del proyecto.
-- `app.js` *(si aplica)*
+- `index.html`
+- `styles.css`
+- `app.js` 
 
 ## 🌐 Vista en línea
 
 Accede al proyecto funcionando en GitHub Pages:
 
 👉 [https://andylbtt.github.io/Modulo4-Becalos.github.io/Semana1/](https://andylbtt.github.io/Modulo4-Becalos.github.io/Semana1/)
-
 ---
-
-Este proyecto demuestra el uso práctico del DOM y validación en formularios como parte del desarrollo frontend.
