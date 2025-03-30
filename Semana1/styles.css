@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fdf6f0;
+    padding: 2rem;
+    margin: 0;
+    color: #4a4a4a;
+}
+h1, h2 {
+    color: #4c788a;
+}
+label {
+    display: block;
+    margin-top: 1rem;
+}
+input, select, button {
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+input.error, select.error {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+button {
+    background-color: #4fc4d5;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background-color: #6fc9e6;
+}
+#errorFecha, #errorDestino, #errorTransporte {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+#errorFecha.error,
+#errorDestino.error,
+#errorTransporte.error {
+    display: block;
+}
+#itinerario {
+    margin-top: 2rem;
+    background: #fffefb;
+    padding: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.viaje {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fef9ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+.btn-eliminar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f87171;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-eliminar:hover {
+    background: #ef4444;
+}
+.layout {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.header-img {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.formulario {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+.error-msg {
+    color: #dc2626;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}

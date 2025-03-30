@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Planificador de Viajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Viaje" class="header-img" style="max-height: 600px; height: 100%; object-fit: cover;">
+
+    <div class="formulario">
+        <h1>Planificador de Viajes</h1>
+
+        <label>Destino:
+        <select id="destino">
+            <option value="">Selecciona un destino</option>
+            <option>Paris</option>
+            <option>Londres</option>
+            <option>New York</option>
+        </select>
+        <span id="errorDestino" class="error-msg"></span>
+        </label>
+
+        <label>Fecha:
+        <input type="date" id="fecha">
+        <span id="errorFecha" class="error-msg"></span>
+        </label>
+
+        <label>Transporte:
+        <select id="transporte">
+            <option value="">Selecciona un transporte</option>
+            <option>Avión</option>
+            <option>Tren</option>
+            <option>Bus</option>
+        </select>
+        <span id="errorTransporte" class="error-msg"></span>
+        </label>
+
+        <button id="registrarBtn">Registrar Destino</button>
+
+        <div id="itinerario">
+        <h2>Itinerario</h2>
+        <div id="detalleItinerario"></div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+    const destinosRegistrados = [];
+
+    const calcularCosto = (destino, transporte) => {
+        const baseCostos = {
+        "Avión": 600,
+        "Tren": 400,
+        "Bus": 250
+        };
+        return `$${baseCostos[transporte] || 300}`;
+    };
+
+    const registrarDestino = (destino, fecha, transporte) => {
+        const costo = calcularCosto(destino, transporte);
+        destinosRegistrados.push({ destino, fecha, transporte, costo });
+    };
+
+    const mostrarItinerario = () => {
+        destinosRegistrados.forEach(viaje => {
+        console.log(`Destino: ${viaje.destino}`);
+        console.log(`Fecha: ${viaje.fecha}`);
+        console.log(`Transporte: ${viaje.transporte}`);
+        console.log(`Costo: ${viaje.costo}`);
+        console.log(`---------------------------`);
+        });
+    };
+
+    const __resetDestinos = () => destinosRegistrados.length = 0;
+
+    const destinoEl = document.getElementById('destino');
+    const fechaEl = document.getElementById('fecha');
+    const transporteEl = document.getElementById('transporte');
+    const detalleItinerario = document.getElementById('detalleItinerario');
+    const errorFecha = document.getElementById('errorFecha');
+    const errorDestino = document.getElementById('errorDestino');
+    const errorTransporte = document.getElementById('errorTransporte');
+
+    const now = new Date();
+    const today = now.toISOString().split('T')[0];
+    fechaEl.setAttribute('min', today);
+    fechaEl.value = today;
+    destinoEl.value = "";
+    transporteEl.value = "";
+
+    const mostrar = () => {
+        detalleItinerario.innerHTML = '';
+        destinosRegistrados.forEach((viaje, index) => {
+        const div = document.createElement('div');
+        div.className = 'viaje';
+        div.innerHTML = `
+            <button class="btn-eliminar" data-index="${index}">X</button>
+            <strong>Destino:</strong> ${viaje.destino}<br>
+            <strong>Fecha:</strong> ${new Date(viaje.fecha).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' })}<br>
+            <strong>Transporte:</strong> ${viaje.transporte}<br>
+            <strong>Costo:</strong> ${viaje.costo}
+        `;
+        detalleItinerario.appendChild(div);
+        });
+
+        document.querySelectorAll('.btn-eliminar').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            destinosRegistrados.splice(index, 1);
+            mostrar();
+        });
+        });
+    };
+
+    document.getElementById('registrarBtn').addEventListener('click', () => {
+        let firstErrorField = null;
+        const destino = destinoEl.value;
+        const fecha = fechaEl.value;
+        const transporte = transporteEl.value;
+
+        errorFecha.textContent = '';
+        errorDestino.textContent = '';
+        errorTransporte.textContent = '';
+
+        destinoEl.classList.remove('error');
+        fechaEl.classList.remove('error');
+        transporteEl.classList.remove('error');
+
+        let hasError = false;
+
+        if (destino === '') {
+        errorDestino.textContent = 'Por favor selecciona un destino.';
+        destinoEl.classList.add('error');
+        if (!firstErrorField) firstErrorField = destinoEl;
+        hasError = true;
+        }
+
+        if (fecha === '') {
+        errorFecha.textContent = 'Por favor selecciona una fecha.';
+        fechaEl.classList.add('error');
+        if (!firstErrorField) firstErrorField = fechaEl;
+        hasError = true;
+        } else if (fecha < today) {
+        errorFecha.textContent = 'No puedes seleccionar una fecha anterior a hoy.';
+        fechaEl.classList.add('error');
+        if (!firstErrorField) firstErrorField = fechaEl;
+        fechaEl.value = today;
+        hasError = true;
+        }
+
+        if (transporte === '') {
+        errorTransporte.textContent = 'Por favor selecciona un transporte.';
+        transporteEl.classList.add('error');
+        if (!firstErrorField) firstErrorField = transporteEl;
+        hasError = true;
+        }
+
+        if (hasError) {
+        if (firstErrorField) firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+        }
+
+        registrarDestino(destino, fecha, transporte);
+        mostrar();
+        fechaEl.value = today;
+    });
+    </script>
+</body>
+</html>
