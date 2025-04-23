@@ -19,6 +19,6 @@ function encontrarMaximo(arr) {
   }
   
 // Probamos la función:
-const numeros = [0.25];
+const numeros = [50, 0.25, 100, 230];
 const maximo = encontrarMaximo(numeros);
 console.log("El máximo de los números del arreglo es:", maximo);
