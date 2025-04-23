@@ -1,4 +1,3 @@
-// script.js
 function buscarPareja() {
     const input = document.getElementById("inputInvitados").value;
     const resultadoDiv = document.getElementById("resultado");
